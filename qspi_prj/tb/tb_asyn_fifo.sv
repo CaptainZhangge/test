@@ -29,6 +29,22 @@ asyn_fifo#(
 .empty		(empty		)
 );
 
+initial begin
+w_en <= 1'd0;
+r_en <= 1'd0;
+wdata <= 2'd0;
+#303;
+w_en <= 1'd1;
+wdata <= 2'd1;
+#(`clk_period)
+w_en <= 1'd0;
+#303;
+r_en <= 1'd1;
+#(`clk_period)
+r_en <= 1'd0;
+#100;
+$finish(2);
+end
 
 //clk
 initial begin
@@ -50,7 +66,8 @@ initial begin
 end
 
 initial begin
-	$fsdbvampar();
+	$fsdbDumpfile("asyn_fifo.fsdb");
+	$fsdbDumpvars("+all");
 	$finish(2);
 end
 
