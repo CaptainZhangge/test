@@ -9,6 +9,7 @@ reg	               		    w_en;
 reg	 	[DATA_WIDTH-1:0]	wdata;
 reg							r_clk;
 reg	 						r_rst_n;
+reg							r_en;
 wire 	[DATA_WIDTH-1:0]	rdata;
 wire						full;
 wire 						empty;
@@ -24,6 +25,7 @@ asyn_fifo#(
 .wdata		(wdata		),
 .r_clk		(r_clk		),
 .r_rst_n	(r_rst_n	),
+.r_en       (r_en		),
 .rdata		(rdata		),
 .full		(full		),
 .empty		(empty		)

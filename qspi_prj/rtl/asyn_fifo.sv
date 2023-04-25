@@ -9,6 +9,7 @@ input               		w_en,
 input 	[DATA_WIDTH-1:0]	wdata,
 input						r_clk,
 input 						r_rst_n,
+input						r_en,
 output 	[DATA_WIDTH-1:0]	rdata,
 output						full,
 output 						empty
@@ -55,7 +56,7 @@ always@(posedge w_clk or negedge syn_w_rst_n)
 if(!syn_w_rst_n)begin
 	waddr_p <= {{ADDR_WIDTH+1}{1'd0}};
 end
-else if(wen && (~full))begin
+else if(w_en && (~full))begin
 	waddr_p <= waddr_p + 1'b1;
 end
 
@@ -72,7 +73,7 @@ always@(posedge r_clk or negedge syn_r_rst_n)
 if(!syn_r_rst_n)begin
 	raddr_p <= {{ADDR_WIDTH+1}{1'd0}};
 end
-else if(ren && (~empty))begin
+else if(r_en && (~empty))begin
 	raddr_p <= raddr_p + 1'b1;
 end
 
@@ -83,11 +84,11 @@ always@(posedge r_clk or negedge syn_r_rst_n)
 if(!syn_r_rst_n)begin
 	rdata_r <= {{ADDR_WIDTH+1}{1'd0}};
 end
-else if(ren && (~empty))begin
+else if(r_en && (~empty))begin
 	rdata_r <= mem[raddr_p-1:0];
 end
 
-assign rdata_cur = (ren && (~empty))?mem[addr_p-1]:rdata_r;
+assign rdata_cur = (r_en && (~empty))?mem[addr_p-1]:rdata_r;
 assign rdata = DELAY?rdata_r:rdata_cur;
 
 //full empty
