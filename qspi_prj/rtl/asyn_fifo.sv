@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module asyn_fifo#(
 parameter	DEEPTH		= 4 ,
 parameter   DATA_WIDTH	= 8 ,
@@ -15,20 +16,20 @@ output						full,
 output 						empty
 );
 
-parameter	ADDR_WIDTH = log(DEEPTH);
+parameter	ADDR_WIDTH = $clog2(DEEPTH);
 
 wire						com_rst_n;
 reg							syn_w_rst_n;
 reg							syn_r_rst_n;
-wire	[ADDR_WIDTH:0]		waddr_p;
+reg 	[ADDR_WIDTH:0]		waddr_p;
 wire	[ADDR_WIDTH:0]		waddr_p_gray;
-wire	[ADDR_WIDTH:0]		raddr_p;
+reg 	[ADDR_WIDTH:0]		raddr_p;
 wire	[ADDR_WIDTH:0]		raddr_p_gray;
-wire	[ADDR_WIDTH-1:0] 	mem [DATA_WIDTH-1:0]; 
+reg 	[ADDR_WIDTH-1:0] 	mem [DATA_WIDTH-1:0]; 
 reg		[DATA_WIDTH-1:0] 	rdata_r;
 reg		[DATA_WIDTH-1:0] 	rdata_cur;
-wire	[ADDR_WIDTH:0]		waddr_p_gray_2d;
-wire	[ADDR_WIDTH:0]		waddr_p_gray_d;
+reg 	[ADDR_WIDTH:0]		waddr_p_gray_2d;
+reg 	[ADDR_WIDTH:0]		waddr_p_gray_d;
 reg 	[ADDR_WIDTH:0]		raddr_p_gray_2d;
 reg 	[ADDR_WIDTH:0]		raddr_p_gray_d;
 
@@ -64,8 +65,8 @@ assign waddr_p_gray = waddr_p ^ (waddr_p >> 1);
 
 //mem
 always@(*)begin
-	if(wen && (~full))
-	mem[waddr_p-1:0] <= wdata;
+	if(w_en && (~full))
+	mem[waddr_p[ADDR_WIDTH-1:0]] <= wdata;
 end
 
 //r add
@@ -82,13 +83,13 @@ assign raddr_p_gray = raddr_p ^ (raddr_p >> 1);
 //r data
 always@(posedge r_clk or negedge syn_r_rst_n)
 if(!syn_r_rst_n)begin
-	rdata_r <= {{ADDR_WIDTH+1}{1'd0}};
+	rdata_r <= {{DATA_WIDTH}{1'd0}};
 end
 else if(r_en && (~empty))begin
-	rdata_r <= mem[raddr_p-1:0];
+	rdata_r <= mem[raddr_p[ADDR_WIDTH-1:0]];
 end
 
-assign rdata_cur = (r_en && (~empty))?mem[addr_p-1]:rdata_r;
+assign rdata_cur = (r_en && (~empty))?mem[raddr_p-1]:rdata_r;
 assign rdata = DELAY?rdata_r:rdata_cur;
 
 //full empty
@@ -109,6 +110,6 @@ else begin
 end
 
 assign empty = (waddr_p_gray_2d ==  raddr_p_gray)?1'b1:1'b0;
-assign full  = ({~raddr_p_gray_2d[ADDR_WIDTH],raddr_p_gray_2d[ADDR_WIDTH-1:0]} == waddr_p_gray)?1'b1:1'b0;
+assign full  = ({~raddr_p_gray_2d[ADDR_WIDTH:ADDR_WIDTH-1],raddr_p_gray_2d[ADDR_WIDTH-2:0]} == waddr_p_gray)?1'b1:1'b0;
 
 endmodule      
