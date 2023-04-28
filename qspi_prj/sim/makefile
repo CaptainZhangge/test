@@ -24,8 +24,9 @@ VCOMP = vcs -full64 -sverilog +v2k -debug_pp    \
 VERDI = -LDFLAGS -rdynamic -P ${NOVAS_ARGS}
 
 
-.PHONY: vcs verdi clean
+.PHONY: com vcs verdi clean
 
+default: com vcs verdi
 #CM  = -cm line+cond+fsm+branch+tgl
 CM  = ""
 #PLI = -P /opt/Synopsys/verdi_2018.09/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUXAMD64/novas.tab  /opt/Synopsys/verdi_2018.09/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUXAMD64/pli.a
