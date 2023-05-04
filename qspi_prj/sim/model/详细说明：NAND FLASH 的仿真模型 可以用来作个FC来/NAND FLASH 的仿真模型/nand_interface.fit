@@ -1,0 +1,235 @@
+--------------------------------------------------
+| Created    : XPLAOPT Version 3.45              |
+| DESIGN     : NAND_INTERFACE.blx                |
+| DEVICE     : XCR3064XL-6VQ44                   |
+| DATE       : Aug 03 11:03:52 2001              |
+--------------------------------------------------
+
+$DEVICES	XCR3064XL-6VQ44	fit (1 sec)
+
+---------------------------------------------------
+|          Total Device Resource Summary          |
+---------------------------------------------------
+| RESOURCE     AVAIL.     USED     UTILIZATION    |
+---------------------------------------------------
+| Clock Inputs     4         0         0.00%      |
+| Global C-Terms   4         0         0.00%      |
+| Func Blocks      4         3        75.00%      |
+| I/O Pins        32        18        56.25%      |
+| Macro Cells     64         9        14.07%      |
+| Registers       64         4         6.25%      |
+| PLA P-Terms    192        17         8.86%      |
+| PLA S-Terms     64         5         7.82%      |
+| Block C-Terms   32        10        31.25%      |
+| Fbk Nands        0         0         0.00%      |
+---------------------------------------------------
+
+---------------------------------------------------
+|        Function Block 1  Resource Summary       |
+---------------------------------------------------
+| RESOURCE     AVAIL.     USED     UTILIZATION    |
+---------------------------------------------------
+| Global Clocks    2         0         0.00%      |
+| Block C-Terms    8         7        87.50%      |
+| Fanins          38        11        28.95%      |
+| I/O Pins         8         7        87.50%      |
+| Macro Cells     16         8        50.00%      |
+| Registers       16         3        18.75%      |
+| PLA P-Terms     48        14        29.17%      |
+| PLA S-Terms     16         5        31.25%      |
+| Fbk Nands        0         0         0.00%      |
+---------------------------------------------------
+
+---------------------------------------------------
+|        Function Block 2  Resource Summary       |
+---------------------------------------------------
+| RESOURCE     AVAIL.     USED     UTILIZATION    |
+---------------------------------------------------
+| Global Clocks    2         0         0.00%      |
+| Block C-Terms    8         3        37.50%      |
+| Fanins          38         7        18.43%      |
+| I/O Pins         8         7        87.50%      |
+| Macro Cells     16         1         6.25%      |
+| Registers       16         1         6.25%      |
+| PLA P-Terms     48         3         6.25%      |
+| PLA S-Terms     16         0         0.00%      |
+| Fbk Nands        0         0         0.00%      |
+---------------------------------------------------
+
+---------------------------------------------------
+|        Function Block 3  Resource Summary       |
+---------------------------------------------------
+| RESOURCE     AVAIL.     USED     UTILIZATION    |
+---------------------------------------------------
+| Global Clocks    2         0         0.00%      |
+| Block C-Terms    8         0         0.00%      |
+| Fanins          38         0         0.00%      |
+| I/O Pins         8         4        50.00%      |
+| Macro Cells     16         0         0.00%      |
+| Registers       16         0         0.00%      |
+| PLA P-Terms     48         0         0.00%      |
+| PLA S-Terms     16         0         0.00%      |
+| Fbk Nands        0         0         0.00%      |
+---------------------------------------------------
+
+---------------------
+| PARTITION SUMMARY |
+---------------------
+
+$FUNCTION BLOCK 1:
+I/O MACROCELLS
+ PIN LOC    | PIN,   NODE,   BURIED COM
+------------+----------------------------------------------------------------
+ 35  FB1_1  | wp_n,     -
+ 34  FB1_2  | ready,    -
+ 33  FB1_8  | cle,      -
+*32  FB1_9  |    ,   N115
+ 31  FB1_10 | re_n,     -
+ 30  FB1_11 | we_n,     -
+ 28  FB1_14 | outce_n,  -
+ 27  FB1_15 | se_n,     -
+
+
+$FUNCTION BLOCK 2:
+I/O MACROCELLS
+ PIN LOC    | PIN,   NODE,   BURIED COM
+------------+----------------------------------------------------------------
+ 42  FB2_1  | ale,      -
+ 43  FB2_2  | ce_n
+ 44  FB2_3  | port_addr[0]
+*1   FB2_9  |    
+ 2   FB2_10 | port_addr[1]
+ 3   FB2_11 | port_addr[2]
+ 5   FB2_14 | port_addr[3]
+ 6   FB2_15 | reset
+
+
+$FUNCTION BLOCK 3:
+I/O MACROCELLS
+ PIN LOC    | PIN,   NODE,   BURIED COM
+------------+----------------------------------------------------------------
+*26  FB3_1  |    
+ 25  FB3_2  | com_lat_n
+ 23  FB3_4  | read_n
+ 22  FB3_9  | ry_byn
+ 21  FB3_10 | write_n
+ 20  FB3_11 |    
+ 19  FB3_12 |    
+ 18  FB3_13 |    
+
+
+
+* Multi-function pin reserved for ISP or prohibited by the user.
+
+TOTAL PINS USED  18
+
+Signal                           Pin      Func    Slew  Power
+Name                             Number   Loc     Rate  Up
+--------------------------------------------------------------------------
+ale                              : 42     FB2_1   FAST  LOW 
+ce_n                             : 43     FB2_2             
+cle                              : 33     FB1_8   FAST      
+com_lat_n                        : 25     FB3_2             
+outce_n                          : 28     FB1_14  FAST  LOW 
+port_addr[0]                     : 44     FB2_3             
+port_addr[1]                     : 2      FB2_10            
+port_addr[2]                     : 3      FB2_11            
+port_addr[3]                     : 5      FB2_14            
+re_n                             : 31     FB1_10  FAST      
+read_n                           : 23     FB3_4             
+ready                            : 34     FB1_2   FAST      
+reset                            : 6      FB2_15            
+ry_byn                           : 22     FB3_9             
+se_n                             : 27     FB1_15  FAST  LOW 
+we_n                             : 30     FB1_11  FAST      
+wp_n                             : 35     FB1_1   FAST  LOW 
+write_n                          : 21     FB3_10            
+
+TOTAL NODES USED   1
+
+Node                             Func        Power
+Name                             Loc         Up
+--------------------------------------------------------------------------
+N115                             : FB1_9         
+
+
+;;------------------------------------------------------------------------;;
+; Implemented Equations.
+
+"********( N115 )***********************************************************
+"PLA 1 pts
+!N115        = !write_n & port_addr[2] & !ce_n & port_addr[1] 
+               & !port_addr[0] & !port_addr[3]; "PT0
+"********( ale )************************************************************
+"PLA 0 pts
+ale.D        = 0; "LUT
+ale.AP       = !port_addr[3] & !write_n & !port_addr[2] & !port_addr[0] 
+               & !ce_n & port_addr[1]; "BCT0
+ale.AR       = reset; "BCT1
+ale.LH       = !port_addr[3] & !write_n & !port_addr[2] & port_addr[0] 
+               & !ce_n & port_addr[1]; "BCT4
+"********( cle )************************************************************
+"PLA 1 pts
+cle          = !port_addr[2] & !ce_n & !port_addr[1] & port_addr[0] 
+               & !port_addr[3]; "PT0
+"********( outce_n )********************************************************
+"PLA 0 pts
+outce_n.D    = 1; "LUT
+outce_n.AP   = reset; "BCT1
+outce_n.AR   = !reset & !write_n & !port_addr[2] & !ce_n & !port_addr[1] 
+               & !port_addr[0] & port_addr[3]; "BCT2
+outce_n.LH   = !write_n & !port_addr[2] & !ce_n & !port_addr[1] 
+               & port_addr[0] & port_addr[3]; "BCT6
+"********( re_n )***********************************************************
+"PLA 1 pts
+!re_n        = !port_addr[2] & !read_n & !ce_n & !port_addr[1] 
+               & !port_addr[0] & !port_addr[3]; "PT0
+"********( ready )**********************************************************
+"PLA 1 pts
+ready        = ry_byn; "PT0
+ready.OE     = port_addr[2] & !read_n & !ce_n & port_addr[1] 
+               & port_addr[0] & port_addr[3]; "BCT0
+"********( se_n )***********************************************************
+"PLA 0 pts
+se_n.D       = 1; "LUT
+se_n.AP      = reset; "BCT1
+se_n.AR      = !reset & !write_n & port_addr[2] & !ce_n & !port_addr[1] 
+               & !port_addr[0] & !port_addr[3]; "BCT3
+se_n.LH      = !write_n & port_addr[2] & !ce_n & !port_addr[1] 
+               & port_addr[0] & !port_addr[3]; "PT1(PT37)
+"********( we_n )***********************************************************
+"PLA 2 pts
+!we_n        = !com_lat_n & !write_n & !port_addr[2] & !ce_n 
+               & !port_addr[1] & !port_addr[3]
+               # !write_n & !port_addr[2] & !ce_n & !port_addr[1] 
+               & !port_addr[0] & !port_addr[3];
+"********( wp_n )***********************************************************
+"PLA 0 pts
+wp_n.D       = 1; "LUT
+!wp_n.AR     = !reset & N115; "BCT4
+wp_n.LH      = !write_n & port_addr[2] & !ce_n & port_addr[1] 
+               & port_addr[0] & !port_addr[3]; "BCT5
+
+****************************  Compiler Options  ****************************
+
+" XPLAOPT -dev xcr3064xl-6vq44 -mode 1 -th 28 -fi 32 -xor n -reg -fbn 0 -ucf 
+"         nand_interface.ucf -ncf nand_interface.ncf -it blif -i nand_interface.blx -run f -log 
+"         nand_interface.er3 -ot n -ctrl NAND_INTERFACE.ctrl -dev XCR3064XL-6VQ44 -bfi 38 -fbn 0 
+"         -pre ignore -vho time_sim.vhd -rsp 3208.rsp 
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : XCR3064XL-6VQ44
+Use Design Location Constraints             : IGNORE
+Reserve JTAG Port Pins for ISP              : ON
+Use Fast Input Registers                    : ON
+Use Foldback NANDs                          : OFF
+Pull Up Unused I/O Pins                     : ON
+Default Register Initial State              : RESET
+Output Slew Rate                            : FAST
+Optimizing Method                           : DENSITY
+D/T Synthesis                               : ON
+Xor Synthesis                               : NONE
+Automatic Node Collapsing                   : ON
+Collapsing Pterm Limit                      : 28
+Collapsing Input Limit                      : 32
+Block Input Limit                           : 38

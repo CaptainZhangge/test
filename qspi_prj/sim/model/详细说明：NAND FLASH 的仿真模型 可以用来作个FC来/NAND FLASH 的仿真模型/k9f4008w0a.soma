@@ -1,0 +1,55 @@
+<soma original.input.version="0.001">
+  <!--
+=====================================================================
+   Copyright (c) 2001 by Denali Software, Inc.  All rights reserved
+=====================================================================
+
+This file contains proprietary information of Denali Software, Inc.
+SOMA(tm) is Denali Software's proprietary language for defining 
+memory models.  
+
+Subject to your agreement with the restrictions set forth below, 
+Denali Software, Inc., grants you a non-exclusive license to use
+the SOMA language in the following manner :
+
+You may:
+
+  *  Use SOMA language to create memory models.
+
+  *  Distribute memory models created using the SOMA language to 
+     others provided that this notice is not removed from the file.
+
+You may not:
+
+  *  Create software programs or tools that use the SOMA language 
+     as either input or output where the software programs are 
+     intended for distribution to others.
+
+  *  Change the SOMA language in any manner.
+
+By using the SOMA specification files, you are consenting to be 
+bound by and are becoming party to this agreement.  If you do not 
+agree to all of the terms of this agreement, you may not use the 
+SOMA specification files.
+
+If you have any questions regarding this agreement, or if you 
+would like to inquire about obtaining additional or different rights 
+in the SOMA specification files and SOMA language, please contact 
+Denali Software.
+
+Written on 29 May 2001
+MemMaker version: 2.900  $DENALI: /home/denali/denali/solaris/2900
+************************************************************************
+ Manufacturer    : SAMSUNG
+ Memory Class    : FLASH
+ Part Name       : k9f4008w0a
+ Revision        : Tue May 29 20:05:31 2001
+ Description     : 512K x 8 Bit NAND Flash Memory
+ Datasheet URL   : http://samsungelectronics.com/semiconductors/Flash/NAND/4M_bit/K9F4008W0A/k9f4008w0a.pdf 
+ Datasheet Info  : 9.15.1999
+ Author Name     : Denali Software, ist
+ Author Comment  : Warning! The time to Ready depends on the value of the 
+                   pull-up resistor tied to R/Bbar pin.
+************************************************************************-->
+  <part ccontent="eLuFcQn1nZfdcqMwDIVfheEB1kma7s+Mw00fYi93hK0szIDJyKYsffqFprFdtpmudBOQ4g9ZJ0ceoo0ZXEAXKu3HvgeaK2068L46L5/NLwfOanXNaBWXnEdnQjs46NqwhtfHFw56PJU9uPEMZs3Q02CxrPQzdCNWuz9otLrea/UGbWmLz63BDQfHTzmwln62NjQR2//4AFokuBWCAMva0SOtiaodtIqBrtvgq+9avV61WrCcNR3m6BL+w+7vsfCeBQ5rsAZ6Vxnd/9O0pYlDT1t6YtGXLX1h0H5b27P6tnM9b1tfc58+Q22Mfp2e2/WLx1BYPMPYhVM5oy+jh19zZVy4jtvbd8F0Plr0cVc4n1yarb6DNmJUXlRcc7pE8iuPBLlGINfIpqJHJplqHpgamXRecdFGut1pSmcrCyRKu90xUbEZSC4RIYhtj41UJITWynVqXiL7wJ3UF2m3hGIztSTVyYdB6gmTs9+4c0Piw4X2adC5hiIxmk3dYzFyWq2zc4nb6kG+31R2X7AkmuVz40P6bXgqLeghq8tlHzI3seFjWaCDukN7Kt1QFurDhRcafmeS9owaNRJ4zNu7S9+i5bUmBstN/IvwF93DR3k=" />
+</soma>
