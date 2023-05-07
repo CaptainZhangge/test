@@ -23,8 +23,10 @@ reg							syn_w_rst_n;
 reg							syn_r_rst_n;
 reg 	[ADDR_WIDTH:0]		waddr_p;
 wire	[ADDR_WIDTH:0]		waddr_p_gray;
+reg 	[ADDR_WIDTH:0]		waddr_p_gray_r;
 reg 	[ADDR_WIDTH:0]		raddr_p;
 wire	[ADDR_WIDTH:0]		raddr_p_gray;
+reg 	[ADDR_WIDTH:0]		raddr_p_gray_r;
 reg 	[ADDR_WIDTH-1:0] 	mem [DATA_WIDTH-1:0]; 
 reg		[DATA_WIDTH-1:0] 	rdata_r;
 reg		[DATA_WIDTH-1:0] 	rdata_cur;
@@ -63,6 +65,13 @@ end
 
 assign waddr_p_gray = waddr_p ^ (waddr_p >> 1);
 
+always@(posedge w_clk or negedge syn_w_rst_n)
+if(!syn_w_rst_n)begin
+	waddr_p_gray_r <= {{ADDR_WIDTH+1}{1'd0}};
+end
+else begin
+	waddr_p_gray_r <= waddr_p_gray;
+end
 //mem
 always@(*)begin
 	if(w_en && (~full))
@@ -79,6 +88,15 @@ else if(r_en && (~empty))begin
 end
 
 assign raddr_p_gray = raddr_p ^ (raddr_p >> 1);
+
+always@(posedge r_clk or negedge syn_r_rst_n)
+if(!syn_r_rst_n)begin
+	raddr_p_gray_r  <= {{ADDR_WIDTH+1}{1'd0}};
+end
+else begin
+	raddr_p_gray_r <= raddr_p_gray;
+end
+ 
 
 //r data
 always@(posedge r_clk or negedge syn_r_rst_n)
@@ -98,7 +116,7 @@ if(!syn_r_rst_n)begin
 	{waddr_p_gray_2d,waddr_p_gray_d} <= {{{ADDR_WIDTH+1}{1'd0}},{{ADDR_WIDTH+1}{1'd0}}};
 end
 else begin
-	{waddr_p_gray_2d,waddr_p_gray_d} <= {waddr_p_gray_d,waddr_p_gray};
+	{waddr_p_gray_2d,waddr_p_gray_d} <= {waddr_p_gray_d,waddr_p_gray_r};
 end
 
 always@(posedge w_clk or negedge syn_w_rst_n)
@@ -106,7 +124,7 @@ if(!syn_w_rst_n)begin
 	{raddr_p_gray_2d,raddr_p_gray_d} <= {{{ADDR_WIDTH+1}{1'd0}},{{ADDR_WIDTH+1}{1'd0}}};
 end
 else begin
-	{raddr_p_gray_2d,raddr_p_gray_d} <= {raddr_p_gray_d,raddr_p_gray};
+	{raddr_p_gray_2d,raddr_p_gray_d} <= {raddr_p_gray_d,raddr_p_gray_r};
 end
 
 assign empty = (waddr_p_gray_2d ==  raddr_p_gray)?1'b1:1'b0;

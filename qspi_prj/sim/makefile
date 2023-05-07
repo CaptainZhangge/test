@@ -1,7 +1,6 @@
-export  file_name = tb_asyn_fifo
+export  file_name = tb_qspi_flash
 
-FILE_LIST = ./sim_filelist.f
-NLINT_FILE_LIST = ./rtl/filelist.f 
+FILE_LIST = sim_filelist.f
 ##TB_DIR    = 
 SIMV_FILE = simv
 LOG_DIR   = ./log
@@ -24,9 +23,8 @@ VCOMP = vcs -full64 -sverilog +v2k -debug_pp    \
 VERDI = -LDFLAGS -rdynamic -P ${NOVAS_ARGS}
 
 
-.PHONY: com vcs verdi clean
+.PHONY: com vcs verdi
 
-default: com vcs verdi
 #CM  = -cm line+cond+fsm+branch+tgl
 CM  = ""
 #PLI = -P /opt/Synopsys/verdi_2018.09/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUXAMD64/novas.tab  /opt/Synopsys/verdi_2018.09/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUXAMD64/pli.a
@@ -63,10 +61,10 @@ vcs:
 ####	${VCOMP} ${CM}  ${VERDI}
 
 verdi:
-	verdi -nologo -sv -f ${FILE_LIST} -ssf *.fsdb +${DUMP_COND}
+	verdi -nologo -sv -f ${FILE_LIST}  +${DUMP_COND}
 
 nlint:
-	nLint -sv -f ${NLINT_FILE_LIST} -gui&
+	nLint -sv -f ${FILE_LIST} -l nLint.log -gui &
 
 clean:
 	rm -rf *.csrc ./*.daidir ${SIMV_FILE } *simv* ucli* *.vpd *.fsdb *novas* *.log
