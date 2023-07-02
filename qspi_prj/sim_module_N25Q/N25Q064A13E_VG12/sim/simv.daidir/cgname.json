@@ -1,0 +1,170 @@
+{
+    "StimTasks": [
+        "StimTasks",
+        "qWs9n",
+        "module",
+        26
+    ],
+    "N25Qxxx": [
+        "N25Qxxx",
+        "E6kFe",
+        "module",
+        2
+    ],
+    "CUIdecoder": [
+        "CUIdecoder",
+        "rfDph",
+        "module",
+        3
+    ],
+    "paramConfig": [
+        "paramConfig",
+        "tW6GT",
+        "module",
+        1
+    ],
+    "Memory": [
+        "Memory",
+        "f0K8C",
+        "module",
+        4
+    ],
+    "UtilFunctions": [
+        "UtilFunctions",
+        "FfcvD",
+        "module",
+        5
+    ],
+    "Program": [
+        "Program",
+        "DbPB7",
+        "module",
+        6
+    ],
+    "StatusRegister": [
+        "StatusRegister",
+        "cebzP",
+        "module",
+        7
+    ],
+    "ProtectionManagementRegister": [
+        "ProtectionManagementRegister",
+        "ZNcgq",
+        "module",
+        9
+    ],
+    "FlagStatusRegister": [
+        "FlagStatusRegister",
+        "Ng4Qf",
+        "module",
+        8
+    ],
+    "LockManager": [
+        "LockManager",
+        "y4gzn",
+        "module",
+        15
+    ],
+    "VolatileConfigurationRegister": [
+        "VolatileConfigurationRegister",
+        "CJs6b",
+        "module",
+        11
+    ],
+    "NonVolatileConfigurationRegister": [
+        "NonVolatileConfigurationRegister",
+        "jJhtT",
+        "module",
+        10
+    ],
+    "SetConfig": [
+        "SetConfig",
+        "rkpgE",
+        "module",
+        22
+    ],
+    "VolatileEnhancedConfigurationRegister": [
+        "VolatileEnhancedConfigurationRegister",
+        "h49xc",
+        "module",
+        12
+    ],
+    "Read": [
+        "Read",
+        "ZwmA6",
+        "module",
+        13
+    ],
+    "FlashDiscoveryParameter": [
+        "FlashDiscoveryParameter",
+        "gp9Va",
+        "module",
+        14
+    ],
+    "DualQuadOps": [
+        "DualQuadOps",
+        "F6uVY",
+        "module",
+        16
+    ],
+    "OTP_memory": [
+        "OTP_memory",
+        "wtFGP",
+        "module",
+        17
+    ],
+    "Stimuli": [
+        "Stimuli",
+        "wdNLp",
+        "module",
+        23
+    ],
+    "TimingCheck": [
+        "TimingCheck",
+        "gS5z5",
+        "module",
+        18
+    ],
+    "PLRSpart1Detect": [
+        "PLRSpart1Detect",
+        "S2Q1F",
+        "module",
+        19
+    ],
+    "PLRSpart2Detect": [
+        "PLRSpart2Detect",
+        "vAFMw",
+        "module",
+        20
+    ],
+    "DebugModule": [
+        "DebugModule",
+        "K4GyS",
+        "module",
+        21
+    ],
+    "Testbench": [
+        "Testbench",
+        "qVPGR",
+        "module",
+        27
+    ],
+    "ClockGenerator": [
+        "ClockGenerator",
+        "PF3UL",
+        "module",
+        24
+    ],
+    "StimTasksConfig": [
+        "StimTasksConfig",
+        "Y9Zj3",
+        "module",
+        25
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        28
+    ]
+}

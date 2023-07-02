@@ -1,0 +1,11 @@
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_module_N25Q/N25Q064A13E_VG12/code/N25Qxxx.v
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_module_N25Q/N25Q064A13E_VG12/include/Decoders.h
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_module_N25Q/N25Q064A13E_VG12/include/DevParam.h
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_module_N25Q/N25Q064A13E_VG12/include/PLRSDetectors.h
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_module_N25Q/N25Q064A13E_VG12/include/TimingData.h
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_module_N25Q/N25Q064A13E_VG12/include/UserData.h
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_module_N25Q/N25Q064A13E_VG12/stim/read.v
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_module_N25Q/N25Q064A13E_VG12/top/ClockGenerator.v
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_module_N25Q/N25Q064A13E_VG12/top/StimGen_interface.h
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_module_N25Q/N25Q064A13E_VG12/top/StimTasks.v
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_module_N25Q/N25Q064A13E_VG12/top/Testbench.v
