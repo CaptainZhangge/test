@@ -1,0 +1,32 @@
+
+VLOGAN	= vlogan
+VLOGAN_OPT	= -l compile.log -sverilog +v2k -full64 +define+SIM +incdir+./include +incdir+./sim +incdir+./stim +incdir+./top -work work -full64
+
+all :		_VCSgd_fyrFRd_1.db \
+	_VCSgd_MTsaAd_1.db \
+	_VCSgd_vNTLt_1.db \
+	_VCSgd_NjhxKe_1.db \
+	_VCSgd_QGycwd_1.db \
+
+
+
+_VCSgd_fyrFRd_1.db :	./code/N25Qxxx.v 
+		${VLOGAN}  ${VLOGAN_OPT} ./code/N25Qxxx.v
+
+
+_VCSgd_MTsaAd_1.db :	./top/StimGen_interface.h 
+		${VLOGAN}  ${VLOGAN_OPT} ./top/StimGen_interface.h
+
+
+_VCSgd_vNTLt_1.db :	./top/ClockGenerator.v 
+		${VLOGAN}  ${VLOGAN_OPT} ./top/ClockGenerator.v
+
+
+_VCSgd_NjhxKe_1.db :	./top/StimTasks.v 
+		${VLOGAN}  ${VLOGAN_OPT} ./top/StimTasks.v
+
+
+_VCSgd_QGycwd_1.db :	./top/Testbench.v 
+		${VLOGAN}  ${VLOGAN_OPT} ./top/Testbench.v
+
+

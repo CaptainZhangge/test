@@ -1,0 +1,647 @@
+debImport "-sv" "+define+SIM" "-f" "sim_filelist.f" "+DUMP_FSDB"
+wvCreateWindow
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvOpenFile -win $_nWave2 \
+           {/home/zhangg/GIT_ALL/test/qspi_prj/sim/tb_qspi_flash.fsdb}
+srcHBSelect "tb_qspi_flash" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_qspi_flash" -delim "."
+srcHBSelect "tb_qspi_flash" -win $_nTrace1
+srcHBSelect "tb_qspi_flash.m25p16_inst" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_qspi_flash.m25p16_inst" -delim "."
+srcHBSelect "tb_qspi_flash.m25p16_inst" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "S" -line 83 -pos 1 -win $_nTrace1
+srcSelect -signal "C_" -line 83 -pos 1 -win $_nTrace1
+srcSelect -signal "HOLD_DQ3" -line 83 -pos 1 -win $_nTrace1
+srcSelect -signal "DQ0" -line 83 -pos 1 -win $_nTrace1
+srcSelect -signal "DQ1" -line 83 -pos 1 -win $_nTrace1
+srcSelect -signal "Vcc" -line 83 -pos 1 -win $_nTrace1
+srcSelect -signal "Vpp_W_DQ2" -line 83 -pos 1 -win $_nTrace1
+wvAddSignal -win $_nWave2 "/tb_qspi_flash/m25p16_inst/S" \
+           "/tb_qspi_flash/m25p16_inst/C_" \
+           "/tb_qspi_flash/m25p16_inst/HOLD_DQ3" \
+           "/tb_qspi_flash/m25p16_inst/DQ0" "/tb_qspi_flash/m25p16_inst/DQ1" \
+           "/tb_qspi_flash/m25p16_inst/Vcc\[31:0\]" \
+           "/tb_qspi_flash/m25p16_inst/Vpp_W_DQ2"
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G1" 7)}
+wvSetPosition -win $_nWave2 {("G1" 7)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 16883882.012724 27858405.320995
+wvZoom -win $_nWave2 20165448.554291 21771321.542719
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcHBSelect "tb_qspi_flash.m25p16_inst.CUIDEC_readFast" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_qspi_flash.m25p16_inst.CUIDEC_readFast" -delim "."
+srcHBSelect "tb_qspi_flash.m25p16_inst.CUIDEC_readFast" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "cmdAllowed" -line 2854 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvAddSignal -win $_nWave2 "/tb_qspi_flash/m25p16_inst/CUIDEC_readFast/cmdAllowed"
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "cmdAllowed" -line 2869 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -signal "N25Qxxx.cmd" -line 2869 -pos 1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "cmdCode" -line 2869 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G1" 4)}
+wvSetPosition -win $_nWave2 {("G1" 7)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvAddSignal -win $_nWave2 "tb_qspi_flash/m25p16_inst/CUIDEC_readFast/cmdCode"
+wvUnknownSaveResult -win $_nWave2 -clear
+wvSetPosition -win $_nWave2 {("G1" 7)}
+wvSetPosition -win $_nWave2 {("G1" 3)}
+wvSetPosition -win $_nWave2 {("G1" 7)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvAddSignal -win $_nWave2 "tb_qspi_flash/m25p16_inst/CUIDEC_readFast/cmdCode"
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -signal "N25Qxxx.cmd" -line 2869 -pos 1
+wvSetPosition -win $_nWave2 {("G1" 7)}
+wvSetPosition -win $_nWave2 {("G1" 6)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvAddSignal -win $_nWave2 "/tb_qspi_flash/m25p16_inst/cmd\[7:0\]"
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvZoom -win $_nWave2 19873736.119144 21808347.599769
+wvSetCursor -win $_nWave2 20771109.402807 -snap {("G2" 2)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+srcHBSelect "tb_qspi_flash" -win $_nTrace1
+srcHBSelect "tb_qspi_flash.flash_rdid_inst" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_qspi_flash.flash_rdid_inst" -delim "."
+srcHBSelect "tb_qspi_flash.flash_rdid_inst" -win $_nTrace1
+srcHBSelect "tb_qspi_flash.flash_rdid_inst.u_qspi_ctrl" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_qspi_flash.flash_rdid_inst.u_qspi_ctrl" -delim "."
+srcHBSelect "tb_qspi_flash.flash_rdid_inst.u_qspi_ctrl" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcInvokeExtEditor -win $_nTrace1
+srcSaveAs -win $_nTrace3 -file \
+          /home/zhangg/GIT_ALL/test/qspi_prj/rtl/qspi_ctrl.sv
+verdiWindowResize -win $_Verdi_1 "510" "190" "900" "700"
+srcSearchString "PPB" -win $_nTrace1 -next -case -allfiles -fileType "*.*"
+nsMsgSwitchTab -tab search
+nsMsgSelect -range {0 3 10-10}
+nsMsgAction -tab search -index {0 3 10}
+nsMsgSelect -range {0 3 10-10}
+nsMsgAction -tab search -index {0 3 10}
+wvCreateWindow
+verdiWindowBeWindow -win $_nWave4
+wvResizeWindow -win $_nWave4 -589 579 1585 453
+wvCloseWindow -win $_nWave4
+wvSetPosition -win $_nWave2 {("G1" 0)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "D" -line 4573 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G1" 4)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvAddSignal -win $_nWave2 "tb_qspi_flash/D\[7:0\]"
+wvSetPosition -win $_nWave2 {("G3" 0)}
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -signal "ppb.enable_PPBReg_read" -line 4571 -pos 1
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSetPosition -win $_nWave2 {("G1" 3)}
+wvSetPosition -win $_nWave2 {("G1" 7)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvAddSignal -win $_nWave2 "/tb_qspi_flash/m25p16_inst/ppb/enable_PPBReg_read"
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G3" 1)}
+wvSetPosition -win $_nWave2 {("G3" 1)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 4569 -pos 4 -win $_nTrace1
+srcAction -pos 4569 4 2 -win $_nTrace1 -name "MEDT_PPB" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 4569 -pos 4 -win $_nTrace1
+srcAction -pos 4569 4 4 -win $_nTrace1 -name "MEDT_PPB" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 4569 -pos 4 -win $_nTrace1
+srcAction -pos 4569 4 4 -win $_nTrace1 -name "MEDT_PPB" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 4569 -pos 4 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -signal "N25Qxxx.rdeasystacken2" -line 4573 -pos 1
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G3" 1)}
+wvSetPosition -win $_nWave2 {("G4" 0)}
+wvAddSignal -win $_nWave2 "tb_qspi_flash/m25p16_inst/rdeasystacken2"
+wvUnknownSaveResult -win $_nWave2 -clear
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -signal "N25Qxxx.rdeasystacken" -line 4573 -pos 1
+srcAction -pos 4572 10 16 -win $_nTrace1 -name "N25Qxxx.rdeasystacken" -ctrlKey \
+          off
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -signal "N25Qxxx.rdeasystacken" -line 4573 -pos 1
+srcAction -pos 4572 10 8 -win $_nTrace1 -name "N25Qxxx.rdeasystacken" -ctrlKey \
+          off
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "D" -line 4573 -pos 1 -win $_nTrace1
+srcAction -pos 4572 4 0 -win $_nTrace1 -name "D" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "A" -line 4573 -pos 1 -win $_nTrace1
+srcAction -pos 4572 7 0 -win $_nTrace1 -name "A" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "A" -line 4536 -pos 1 -win $_nTrace1
+srcSelect -win $_nTrace1 -range {4536 4536 12 13 1 1}
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 4533 -pos 3 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 4533 -pos 3 -win $_nTrace1
+srcAction -pos 4533 3 2 -win $_nTrace1 -name "out_info" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "readAddr" -line 1941 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G1" 6)}
+wvSetPosition -win $_nWave2 {("G1" 7)}
+wvSetPosition -win $_nWave2 {("G4" 0)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G4" 0)}
+wvAddSignal -win $_nWave2 "/tb_qspi_flash/m25p16_inst/readAddr\[23:0\]"
+wvSetPosition -win $_nWave2 {("G4" 0)}
+wvSetPosition -win $_nWave2 {("G4" 1)}
+wvSetPosition -win $_nWave2 {("G4" 1)}
+wvZoom -win $_nWave2 19944085.627530 24376104.655870
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "readAddr" -line 1941 -pos 1 -win $_nTrace1
+srcAction -pos 1940 3 4 -win $_nTrace1 -name "readAddr" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -signal "mem.memAddr" -line 1939 -pos 1
+srcAction -pos 1938 5 6 -win $_nTrace1 -name "mem.memAddr" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {4142 4143 1 1 1 1}
+verdiWindowResize -win $_Verdi_1 "242" "56" "900" "700"
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+debReload
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G1" 3 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 2 )} 
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+debReload
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSetCursor -win $_nWave2 353628.208745 -snap {("G1" 4)}
+wvSetSearchMode -win $_nWave2 -posedge
+wvSearchNext -win $_nWave2
+wvZoom -win $_nWave2 0.000000 6807343.018336
+wvZoom -win $_nWave2 0.000000 720099.755113
+wvZoom -win $_nWave2 90393.340205 248835.599440
+wvZoom -win $_nWave2 134417.494040 193861.275361
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvScrollDown -win $_nWave2 2
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvZoom -win $_nWave2 0.000000 3536293.483780
+wvZoom -win $_nWave2 0.000000 299263.200320
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 0.000000 574045.066904
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 27655444.775740 48242405.263752
+wvZoom -win $_nWave2 30907545.727302 41128434.432210
+wvZoom -win $_nWave2 33343836.546947 37437958.397714
+wvZoom -win $_nWave2 34007904.266035 37426409.393897
+wvScrollDown -win $_nWave2 2
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvZoom -win $_nWave2 34600959.457464 35063831.801999
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 0.000000 2473969.500705
+wvZoom -win $_nWave2 24425.650924 237277.751831
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 1
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+srcHBSelect "tb_qspi_flash.m25p16_inst.timeCheck" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_qspi_flash.m25p16_inst.timeCheck" -delim "."
+srcHBSelect "tb_qspi_flash.m25p16_inst.timeCheck" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 9689 -pos 4 -win $_nTrace1
+srcAction -pos 9689 4 4 -win $_nTrace1 -name "\"DevParam.h\"" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcAction -pos 62 3 4 -win $_nTrace1 -name "timingChecks" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcAction -pos 62 3 6 -win $_nTrace1 -name "timingChecks" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcAction -pos 62 3 6 -win $_nTrace1 -name "timingChecks" -ctrlKey off
+srcHBSelect "tb_qspi_flash.m25p16_inst" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_qspi_flash.m25p16_inst" -delim "."
+srcHBSelect "tb_qspi_flash.m25p16_inst" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 81 -pos 4 -win $_nTrace1
+srcAction -pos 81 4 5 -win $_nTrace1 -name "HOLD_pin" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 88 -pos 3 -win $_nTrace1
+srcAction -pos 88 3 3 -win $_nTrace1 -name "\"DevParam.h\"" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+verdiWindowResize -win $_Verdi_1 "474" "50" "900" "700"
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+debReload
+srcHBSelect "tb_qspi_flash" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_qspi_flash" -delim "."
+srcHBSelect "tb_qspi_flash" -win $_nTrace1
+srcHBSelect "tb_qspi_flash.flash_rdid_inst" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_qspi_flash.flash_rdid_inst" -delim "."
+srcHBSelect "tb_qspi_flash.flash_rdid_inst" -win $_nTrace1
+srcHBSelect "tb_qspi_flash.flash_rdid_inst.u_qspi_ctrl" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_qspi_flash.flash_rdid_inst.u_qspi_ctrl" -delim "."
+srcHBSelect "tb_qspi_flash.flash_rdid_inst.u_qspi_ctrl" -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "cmd_cnt" -line 123 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvAddSignal -win $_nWave2 \
+           "/tb_qspi_flash/flash_rdid_inst/u_qspi_ctrl/cmd_cnt\[2:0\]"
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "ce" -line 124 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvAddSignal -win $_nWave2 "/tb_qspi_flash/flash_rdid_inst/u_qspi_ctrl/ce"
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "ce" -line 124 -pos 1 -win $_nTrace1
+srcAction -pos 123 6 0 -win $_nTrace1 -name "ce" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "en" -line 96 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G1" 5)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvAddSignal -win $_nWave2 "/tb_qspi_flash/flash_rdid_inst/u_qspi_ctrl/en"
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "en" -line 96 -pos 1 -win $_nTrace1
+srcAction -pos 95 6 0 -win $_nTrace1 -name "en" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "count" -line 85 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvAddSignal -win $_nWave2 \
+           "/tb_qspi_flash/flash_rdid_inst/u_qspi_ctrl/count\[9:0\]"
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvZoom -win $_nWave2 13615851.018390 15170864.644446
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G1" 2 )} 
+wvSetRadix -win $_nWave2 -format UDec
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 38862822.292655 40892969.725853
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 44010696.141122 45170780.388664
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 61049433.526894 62499538.836322
+debReload
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvZoom -win $_nWave2 79237033.703875 94005226.365529
+wvScrollUp -win $_nWave2 1
+wvSetCursor -win $_nWave2 83781092.984379 -snap {("G1" 4)}
+wvZoom -win $_nWave2 83362561.208543 87488088.713215
+wvSetCursor -win $_nWave2 84450612.418564 -snap {("G1" 8)}
+wvSetCursor -win $_nWave2 83928061.508486 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 84018732.442655 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 84095086.913534 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 84178599.616058 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 84247795.855292 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 84340852.866675 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 84412435.183124 -snap {("G1" 6)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 99306628.859456 108962754.830538
+wvZoom -win $_nWave2 103657191.110157 104679210.226819
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 83569402.416646 92989238.531810
+wvSetCursor -win $_nWave2 85002263.549253 -snap {("G1" 5)}
+wvSetCursor -win $_nWave2 84468345.712766 -snap {("G1" 5)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+srcHBSelect "paramConfig" -win $_nTrace1
+srcHBSelect "tb_qspi_flash" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_qspi_flash" -delim "."
+srcHBSelect "tb_qspi_flash" -win $_nTrace1
+debReload
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollUp -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvSelectSignal -win $_nWave2 {( "G2" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "full_access_power_up_delay" -line 96 -pos 1 -win $_nTrace1
+srcAction -pos 95 3 13 -win $_nTrace1 -name "full_access_power_up_delay" -ctrlKey \
+          off
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "full_access_power_up_delay" -line 96 -pos 1 -win $_nTrace1
+srcAction -pos 95 3 13 -win $_nTrace1 -name "full_access_power_up_delay" -ctrlKey \
+          off

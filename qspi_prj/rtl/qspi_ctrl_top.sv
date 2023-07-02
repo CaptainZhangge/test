@@ -1,10 +1,13 @@
 module qspi_ctrl_top(
         input                   ref_clk  ,
         input                   rst_n    ,
+        `ifdef SIM
+        input                   flash_en ,
+        `endif
         output                  clk_o    ,
         output                  ce       ,
-  input       flash_do ,
-  output      flash_di
+        input                   flash_do ,
+        output                  flash_di
         //inout [3:0]   DQ          
         );
 //axi
@@ -107,6 +110,9 @@ STARTUPE2_inst
 qspi_ctrl u_qspi_ctrl(
 .clk                              (qspi_clk               ),// input
 .rst_n                            (rst_n                          ),// input
+`ifdef SIM
+.flash_en                          (flash_en),
+`endif
 .din                              (flash_do               ),// input
 .aclk                               (aclk                           ),// input wire aclk
 .aresetn                          (aresetn                ),// input wire aresetn

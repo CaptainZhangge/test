@@ -1,0 +1,32 @@
+
+VLOGAN	= vlogan
+VLOGAN_OPT	= -l compile.log -sverilog +v2k -full64 +define+SIM +incdir+./../sim_model/flash/MT25QL128ABA1E0_VG13/include +incdir+./../sim_model/flash/MT25QL128ABA1E0_VG13/sim +incdir+./../sim_model/flash/MT25QL128ABA1E0_VG13/stim +incdir+./../sim_model/flash/MT25QL128ABA1E0_VG13/top -work work -full64
+
+all :		_VCSgd_hpYDT_1.db \
+	_VCSgd_FVaz6c_1.db \
+	_VCSgd_OUSQ9d_1.db \
+	_VCSgd_fyrFRd_1.db \
+	_VCSgd_d4kuud_1.db \
+
+
+
+_VCSgd_hpYDT_1.db :	./../rtl/./asyn_fifo.sv 
+		${VLOGAN}  ${VLOGAN_OPT} ./../rtl/./asyn_fifo.sv
+
+
+_VCSgd_FVaz6c_1.db :	./../rtl/./qspi_ctrl.sv 
+		${VLOGAN}  ${VLOGAN_OPT} ./../rtl/./qspi_ctrl.sv
+
+
+_VCSgd_OUSQ9d_1.db :	./../rtl/./qspi_ctrl_top.sv 
+		${VLOGAN}  ${VLOGAN_OPT} ./../rtl/./qspi_ctrl_top.sv
+
+
+_VCSgd_fyrFRd_1.db :	./../sim_model/flash/MT25QL128ABA1E0_VG13/code/N25Qxxx.v 
+		${VLOGAN}  ${VLOGAN_OPT} ./../sim_model/flash/MT25QL128ABA1E0_VG13/code/N25Qxxx.v
+
+
+_VCSgd_d4kuud_1.db :	./../tb/tb_qspi_flash.sv 
+		${VLOGAN}  ${VLOGAN_OPT} ./../tb/tb_qspi_flash.sv
+
+

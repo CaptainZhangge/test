@@ -4,6 +4,7 @@ FILE_LIST = sim_filelist.f
 ##TB_DIR    = 
 SIMV_FILE = simv
 LOG_DIR   = ./log
+DEFINE    =+define+SIM
 
 #----Coverage----
 CM_TYPE = line+cond+fsm+branch+tgl
@@ -33,20 +34,22 @@ PLI = -P /disk/Synopsys/verdi-2018.9/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LIN
 
 #----------COMMAND-----------
 com:
-	vlogan -work work               \
+	vlogan -work work               		\
 	       	-sverilog                       \
 	       	+v2k                            \
 	       	-full64                         \
 	       	-l compile.log                  \
+	       	${DEFINE}						\
 	       	-f ${FILE_LIST}
 vcs:
 	vcs     -cpp g++-4.8 -cc gcc-4.8 -LDFLAGS -Wl,--no-as-needed \
                 -full64                         \
-		-sverilog			\
+				-sverilog						\
                 -lca                            \
                 -t ps                           \
                 -l run.log                      \
-		-f ${FILE_LIST}			\
+                ${DEFINE}						\
+			-f ${FILE_LIST}						\
                 $(CM)                           \
                 $(PLI)                          \
                 -Mupdate                        \
@@ -61,7 +64,7 @@ vcs:
 ####	${VCOMP} ${CM}  ${VERDI}
 
 verdi:
-	verdi -nologo -sv -f ${FILE_LIST}  +${DUMP_COND}
+	verdi -nologo -sv ${DEFINE} -f ${FILE_LIST}  +${DUMP_COND}
 
 nlint:
 	nLint -sv -f ${FILE_LIST} -l nLint.log -gui &

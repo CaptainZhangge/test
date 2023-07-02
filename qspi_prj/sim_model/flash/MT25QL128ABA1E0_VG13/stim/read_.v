@@ -43,6 +43,21 @@
         tasks.wrapUp;
     end
 
+initial begin
+//if($test$plusargs("DUMP_FSDB"))
+begin
+        $display("==============================Begin to fsdb======================");
+        $fsdbDumpfile("M25_qspi.fsdb");  //                           testname.fsdb
+        $fsdbDumpvars("+all");  //+all         dump SV      struct         
+        $fsdbDumpSVA();   //   assertion               fsdb   
+        $fsdbDumpMDA(0, Testbench);  //dump memory arrays
+        //0:                                        top.A, top.A.a            top                              dump
+        //1:       dump                              dump top                           
+        #1000000;
+        $finish;
+end
+end
+
 task readArray;
     input [40*dataDim-1:0] cycle;
     begin

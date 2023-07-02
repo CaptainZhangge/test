@@ -58,10 +58,10 @@
 
 
 
-`include "include/UserData.h"
+`include "UserData.h"
 
 module paramConfig();
-`include "include/DevParam.h"
+`include "DevParam.h"
 
 endmodule
 
@@ -86,7 +86,7 @@ endmodule
     `endif
 `endif
 
-`include "include/DevParam.h"
+`include "DevParam.h"
  parameter [1:0] rdeasystacken = 0;
  parameter [1:0] rdeasystacken2 = 0;
  parameter [15:0] NVConfigReg_default = `NVCR_DEFAULT_VALUE;
@@ -128,10 +128,10 @@ inout Vpp_W_DQ2; //input Vpp_W, inout DQ2 (VPPH not implemented)
 
 
 //parameter [40*8:1] memory_file = "mem_Q016.vmf";
-parameter [40*8:1] memory_file = `FILENAME_mem;
+parameter [200*8:1] memory_file = `FILENAME_mem;
 
 // parameter [2048*8:1] fdp_file = "sfdp.vmf";
-parameter [48*8:1] fdp_file = `FILENAME_sfdp;
+parameter [200*8:1] fdp_file = `FILENAME_sfdp;
 
 
 reg PollingAccessOn = 0;
@@ -340,7 +340,7 @@ assign W_int = Vpp_W_DQ2;
 // CUI decoders istantiation
 //----------------------------
 
-`include "include/Decoders.h"
+`include "Decoders.h"
 
 
 
@@ -485,7 +485,7 @@ ProtectionManagementRegister PMReg(); // instantiated the protection management 
 OTP_memory      OTP (); 
 
 
-`include "include/PLRSDetectors.h"
+`include "PLRSDetectors.h"
 
 DebugModule Debug ();
 
@@ -2849,7 +2849,7 @@ endmodule //N25Qxxx
 module CUIdecoder (cmdAllowed);
 
 
-    `include "include/DevParam.h" 
+    `include "DevParam.h" 
 
     input cmdAllowed;
 
@@ -2973,7 +2973,7 @@ endmodule //CUIdecoder
 `ifdef MEDT_MSE
 //CUIdecoderEFI captures 
 module CUIdecoderEFI_MSE (cmdAllowed);
-    `include "include/DevParam.h" 
+    `include "DevParam.h" 
 
     input cmdAllowed;
 
@@ -3654,7 +3654,7 @@ endmodule //CUIdecoderEFI_MSE
 
 `ifdef MEDT_TDP
 module CUIdecoder_TDP (cmdAllowed);
-    `include "include/DevParam.h" 
+    `include "DevParam.h" 
 
     input cmdAllowed;
 
@@ -3702,6 +3702,7 @@ module CUIdecoder_TDP (cmdAllowed);
             tdp_pattern = tdp_pattern >> 8;
         end
     end
+
 
     always @N25Qxxx.startCUIdec begin
         if (cmdAllowed && cmdCode==N25Qxxx.cmd) begin
@@ -4052,10 +4053,10 @@ module Memory(mem_file);
 
     
 
-    `include "include/DevParam.h"
+    `include "DevParam.h"
 
 
-    input [40*8:1] mem_file;
+    input [200*8:1] mem_file;
 
     //-----------------------------
     // data structures definition
@@ -4456,7 +4457,7 @@ endmodule
 
 module UtilFunctions;
 
-    `include "include/DevParam.h"
+    `include "DevParam.h"
 
     integer i;
 
@@ -4739,8 +4740,8 @@ module Program;
 
     
 
-    `include "include/DevParam.h"
-    `include "include/UserData.h"
+    `include "DevParam.h"
+    `include "UserData.h"
 
     
 
@@ -6430,7 +6431,7 @@ endmodule
 module StatusRegister;
 
 
-    `include "include/DevParam.h"
+    `include "DevParam.h"
 
 
 
@@ -6609,7 +6610,7 @@ endmodule
 module FlagStatusRegister;
 
 
-    `include "include/DevParam.h"
+    `include "DevParam.h"
 
 
 
@@ -6793,7 +6794,7 @@ endmodule
 
 module ProtectionManagementRegister;
 
-    `include "include/DevParam.h"
+    `include "DevParam.h"
 
     parameter [7:0] ProcManReg_default = 'b11111111;
    
@@ -6865,7 +6866,7 @@ module ProtectionManagementRegister;
 
 module NonVolatileConfigurationRegister(NVConfigReg);
 
-    `include "include/DevParam.h"
+    `include "DevParam.h"
 
     // parameter [15:0] NVConfigReg_default = 'b1111111111111110;
     // parameter [15:0] NVConfigReg_default = 'b1111111111111111;
@@ -6971,7 +6972,7 @@ endmodule
 
 module VolatileConfigurationRegister;
 
-    `include "include/DevParam.h"
+    `include "DevParam.h"
 
     parameter [7:0] VConfigReg_default = 'b11111011;
    
@@ -7064,7 +7065,7 @@ endmodule
 
 module VolatileEnhancedConfigurationRegister;
 
-    `include "include/DevParam.h"
+    `include "DevParam.h"
 
     `ifdef MEDITERANEO
     parameter [7:0] VEConfigReg_default = 'b11111111;
@@ -7210,7 +7211,7 @@ endmodule
 
 module PasswordRegister();
 
-    `include "include/DevParam.h"
+    `include "DevParam.h"
 
     reg [(8*8)-1:0] PSWORD = 64'hFFFF_FFFF_FFFF_FFFF;
     //reg [(8*8)-1:0] PSWORD = 'h0011_2233_44cc_ddee;
@@ -7311,7 +7312,7 @@ endmodule
 module Read;
 
 
-    `include "include/DevParam.h"
+    `include "DevParam.h"
     
    
    
@@ -7858,11 +7859,11 @@ endmodule
 
 module FlashDiscoveryParameter(sfdp_file);
 
-`include "include/DevParam.h"
+`include "DevParam.h"
 
 
   //input [2048*8:1] sfdp_file ;
-  input [48*8:1] sfdp_file ;
+  input [200*8:1] sfdp_file ;
 //-----------------------------
 // data structures definition
 //-----------------------------
@@ -7950,7 +7951,7 @@ endmodule
 module LockManager;
 
 
-`include "include/DevParam.h"
+`include "DevParam.h"
 
 
 
@@ -8249,7 +8250,7 @@ endmodule
 module LockManager4KB;
 
 
-`include "include/DevParam.h"
+`include "DevParam.h"
 
 //---------------------------------------------------
 // Data structures for protection status modelling
@@ -8542,8 +8543,8 @@ endmodule // LockManager4KB
 `else
   module DualQuadOps (S, C, ck_count, DoubleTransferRate, DQ0, DQ1, Vpp_W_DQ2, RESET_DQ3);
 `endif
-    `include "include/DevParam.h"
-    `include "include/UserData.h"
+    `include "DevParam.h"
+    `include "UserData.h"
 
     input S;
     input C;
@@ -9529,7 +9530,7 @@ endmodule
 module OTP_memory;
 
     
-    `include "include/DevParam.h"
+    `include "DevParam.h"
 
 
     reg [dataDim-1:0] mem [0:OTP_dim-1];
@@ -9687,8 +9688,8 @@ endmodule
   module TimingCheck (S, C, D, Q, W, R);
 `endif
 
-    `include "include/DevParam.h"
-    `include "include/UserData.h"
+    `include "DevParam.h"
+    `include "UserData.h"
 
     input S, C, D, Q;
     `ifdef HOLD_pin
@@ -10080,7 +10081,7 @@ endmodule
 module ExtendedAddressRegister;
 
 
-    `include "include/DevParam.h"
+    `include "DevParam.h"
 
     parameter [7:0] ExtendAddrReg_default = 'b00000000;
 
@@ -10200,7 +10201,7 @@ endmodule  // ExtendedAddressRegister
     module N25QxxxTop (S, C, RESET_DQ3, DQ0, DQ1, Vcc, Vpp_W_DQ2);
   `endif
 
-  `include "include/DevParam.h"
+  `include "DevParam.h"
   
   // parameter [15:0] NVConfigReg_default = 'b1111111111111110;
 
@@ -10222,7 +10223,7 @@ endmodule  // ExtendedAddressRegister
   inout Vpp_W_DQ2; //input Vpp_W, inout DQ2 (VPPH not implemented)
 
   parameter [1:0] deviceStack = 0;
-  `include "include/StackDecoder.h"
+  `include "StackDecoder.h"
   
   
     reg [1:0] current_die_sel = 0;
@@ -10478,7 +10479,7 @@ endmodule  // ExtendedAddressRegister
         `endif
     `endif // Feature_8
 
-`include "include/DevParam.h"
+`include "DevParam.h"
 
   input S;
   input C;
@@ -10513,7 +10514,7 @@ endmodule  // ExtendedAddressRegister
     wire [3:0] current_die_busy ;
     wire [3:0] current_die_active ;
 
-`include "include/StackDecoder.h"
+`include "StackDecoder.h"
 
     assign any_die_busy = MT25Q_die0.busy || MT25Q_die1.busy  ;
     assign current_die_busy ={ MT25Q_die1.busy , MT25Q_die0.busy} ;
@@ -10747,7 +10748,7 @@ endmodule // MT25QxxxTop
         `endif
     `endif // Feature_8
 
-`include "include/DevParam.h"
+`include "DevParam.h"
 
   input S;
   input C;
@@ -10782,7 +10783,7 @@ endmodule // MT25QxxxTop
     wire [3:0] current_die_busy ;
     wire [3:0] current_die_active ;
 
-`include "include/StackDecoder.h"
+`include "StackDecoder.h"
 
     assign any_die_busy = MT25Q_die0.busy || MT25Q_die1.busy || MT25Q_die2.busy || MT25Q_die3.busy  ;
     assign current_die_busy ={ MT25Q_die3.busy, MT25Q_die2.busy, MT25Q_die1.busy , MT25Q_die0.busy} ;
@@ -11259,7 +11260,7 @@ endmodule // PLRSpart2Detect module
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 module GeneralPurposeRegister;
 
-//    `include "include/DevParam.h"
+//    `include "DevParam.h"
 
     parameter [(64*8)-1:0] GPRR_default = 512'b0;
    
@@ -11315,7 +11316,7 @@ endmodule
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 `ifdef MEDT_PPB //Non-volatile block lock
 module PPBManager();
-    `include "include/DevParam.h"
+    `include "DevParam.h"
     reg [nSector-1:0] PPBReg;
     reg enable_PPBReg_read;
     integer i;
@@ -11537,7 +11538,7 @@ endmodule
 
 module PPBLockBitRegister;
 
-    `include "include/DevParam.h"
+    `include "DevParam.h"
 
     parameter [7:0] PLBReg_default = 'b00000001;
    
@@ -11607,7 +11608,7 @@ end
 
 module ASPRegister();
 
-    `include "include/DevParam.h"
+    `include "DevParam.h"
 
     reg [15:0] ASP = 'hFFFF;
 
@@ -11658,14 +11659,14 @@ endmodule // MEDT_ADVANCED_SECTOR
 `endif
 
 `ifdef MT25T_H
-`include "include/MT25TOP.v" 
+`include "MT25TOP.v" 
 `endif //MT25T
 `ifdef MT25T_B
-`include "include/MT25TOP.v" 
+`include "MT25TOP.v" 
 `endif //MT25T
 
 module DebugModule ();
-    `include "include/DevParam.h"
+    `include "DevParam.h"
 
 event x0;
 event x1;

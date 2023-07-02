@@ -1,0 +1,11 @@
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/code/N25Qxxx.v
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/include/Decoders.h
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/include/DevParam.h
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/include/PLRSDetectors.h
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/include/TimingData.h
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/include/UserData.h
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/stim/archive/read.v
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/top/ClockGenerator.v
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/top/StimGen_interface.h
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/top/StimTasks.v
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/top/Testbench.v

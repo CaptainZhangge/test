@@ -1,0 +1,221 @@
+Command: vcs -cpp g++-4.8 -cc gcc-4.8 -LDFLAGS -Wl,--no-as-needed -full64 -sverilog \
+-lca -timescale=1ns/100fs -l run.log +define+SIM -F ./filelist.f -o ./sim/simv  -P \
+/disk/Synopsys/verdi-2018.9/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUXAMD64/novas.tab \
+/disk/Synopsys/verdi-2018.9/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUXAMD64/pli.a \
+-Mupdate -R +lint=all -debug_all +vcs+initreg+random -q
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS/VCS-MX Release Notes
+
+
+Warning-[DEBUG_DEP] Option will be deprecated
+  The option '-debug_all' will be deprecated in a future release.  Please use 
+  '-debug_acc+all -debug_region+cell+encrypt' instead.
+
+The design hasn't changed and need not be recompiled. 
+If you really want to, delete file /home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/./sim/simv.daidir/.vcs.timestamp and
+run VCS again.
+
+Command: /home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/./sim/simv -lca -a run.log +define+SIM +lint=all +vcs+initreg+random -q
+==============================================
+===INFO=== Model Configuration Info
+===INFO=== Device Name: MT25QL128ABA1E0
+===INFO=== DQ3 = HOLD pin
+===INFO=== XIP type = Numonyx
+===INFO=== VCC 3V
+==============================================
+[0 ns] ==INFO== Protocol selected is extended
+[0 ns] ==INFO== Hold condition disabled: communication with the device has been activated.
+[0 ns] ==INFO== 2. Load memory content from file: "/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/sim/mem_Q128.vmf".
+[0 ns] ==INFO== Power up: polling allowed.
+[0 ns] ==INFO== VCC has been driven below threshold : internal logic will be reset.
+[0 ns] ==INFO== Protocol selected is extended
+[0 ps] ==INFO== Single Transfer Rate selected
+[1000 ns] ==INFO== 1. Load memory content from file: "/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/sim/mem_Q128.vmf".
+[1000 ns] ==INFO== Load flash discovery paramater table content from file: "/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/sim/sfdp.vmf".
+[150000 ns] ==INFO== Power up: device fully accessible.
+[150000 ns] ==INFO== Protocol selected is extended
+[150000 ps] ==INFO== Single Transfer Rate selected
+
+ ----- Read.
+  [262000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+[560000 ns] COMMAND DECODED: Read , withAddr=00000001, with2Addr=00000000, with4Addr=00000000, cmdcode=03 
+[560000 ns] 1.COMMAND RECOGNIZED: Read. Address expected ...
+  [582000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [902000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [1222000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [1542000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [1840000 ns] Address latched: 000000 (byte 0 of page 0, sector 0)
+  [1862000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [2182000 ns] Data are going to be output: 00000001. [Read Status Register] 0 0
+  [2502000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [2822000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [3088000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+[3386000 ns] COMMAND DECODED: Read , withAddr=00000001, with2Addr=00000000, with4Addr=00000000, cmdcode=03 
+[3386000 ns] 1.COMMAND RECOGNIZED: Read. Address expected ...
+  [3408000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [3728000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [4048000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [4368000 ns] Data are going to be output: 10100101. [Read Status Register] 0 0
+  [4666000 ns] Address latched: fffa00 (byte 0 of page 65530, sector 255)
+  [4688000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [5008000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [5328000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [5648000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [5968000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [6288000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [6608000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+
+ ----- Dual Read.
+  [7178000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+[7476000 ns] COMMAND DECODED: Dual Output Fast Read , withAddr=00000001, with2Addr=00000000, with4Addr=00000000, cmdcode=3b 
+[7476000 ns] 1.COMMAND RECOGNIZED: Dual Output Fast Read. Address expected ...
+  [7498000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [7818000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [8138000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [8458000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [8756000 ns] Address latched: 000801 (byte 1 of page 8, sector 0)
+  [8756000 ns] Dummy byte expected ...
+  [8778000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [9076000 ns] Dummy clock cycles latched .
+  [9097000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [9098000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [9257000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [9417000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [9418000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+
+ ----- Fast Read.
+  [9788000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+[10086000 ns] COMMAND DECODED: Read Fast , withAddr=00000001, with2Addr=00000000, with4Addr=00000000, cmdcode=0b 
+[10086000 ns] 1.COMMAND RECOGNIZED: Read Fast. Address expected ...
+  [10108000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [10428000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [10748000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [11068000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [11366000 ns] Address latched: 000001 (byte 1 of page 0, sector 0)
+  [11366000 ns] Dummy byte expected ...
+  [11388000 ns] Data are going to be output: 00000001. [Read Status Register] 0 0
+  [11686000 ns] Dummy clock cycles latched .
+  [11708000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [12028000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [12348000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [12668000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+
+ ----- Dual I/O read
+  [13198000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+[13496000 ns] COMMAND DECODED: Dual I/O Fast Read , withAddr=00000000, with2Addr=00000001, with4Addr=00000000, cmdcode=bb 
+[13496000 ns] 2.COMMAND RECOGNIZED: Dual I/O Fast Read. Address expected ...
+  [13518000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [13838000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [14136000 ns] Address latched: 555000 (byte 0 of page 21840, sector 85)
+  [14136000 ns] Dummy byte expected ...
+  [14158000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [14456000 ns] Dummy clock cycles latched .
+  [14477000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [14478000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [14637000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [14797000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [14798000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [14957000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [15117000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [15118000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [15277000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [15437000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [15438000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [15597000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [15757000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [15758000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+
+ ----- Quad Fast Read.
+  [16128000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+[16426000 ns] COMMAND DECODED: Quad Output Read , withAddr=00000001, with2Addr=00000000, with4Addr=00000000, cmdcode=6b 
+[16426000 ns] 1.COMMAND RECOGNIZED: Quad Output Read. Address expected ...
+  [16448000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [16768000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [17088000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [17408000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [17706000 ns] Address latched: 000801 (byte 1 of page 8, sector 0)
+  [8000 ns]                17706 Dummy clock cycles expected ...
+  [17728000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [18026000 ns] Dummy clock cycles latched .
+  [18046000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [18048000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [18126000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [18206000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [18286000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+
+ -----  Quad I/O read
+  [18578000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+[18876000 ns] COMMAND DECODED: Quad I/O Fast Read , withAddr=00000000, with2Addr=00000000, with4Addr=00000001, cmdcode=eb 
+[18876000 ns] 4.COMMAND RECOGNIZED: Quad I/O Fast Read. Address expected ...
+  [18898000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [19196000 ns] Address latched: ddcZZZ (byte Z of page Z, sector 221)
+  [10000 ns]                19196 Dummy clock cycles expected ...
+  [19218000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [19538000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [19596000 ns] Dummy clock cycles latched .
+  [19616000 ns] Data are going to be output: xxxxxxxx. [Read Status Register] 0 0
+  [19618000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [19696000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [19776000 ns] Data are going to be output: 00000001. [Read Status Register] 0 0
+  [19856000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [19936000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [19938000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [20016000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [20096000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [20176000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [20256000 ns] Data are going to be output: 11111111. [Read Status Register] 0 0
+  [20258000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+
+ ----- Read ID.
+  [20588000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+[20886000 ns] COMMAND DECODED: Read ID , withAddr=00000000, with2Addr=00000000, with4Addr=00000000, cmdcode=9f 
+[20886000 ns] COMMAND RECOGNIZED: Read ID.
+  [20908000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [21228000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [21548000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [21868000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [22188000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [22508000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [22828000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [23148000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [23468000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [23788000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [24108000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [24428000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [24748000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [25068000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [25388000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [25708000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [26028000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [26348000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [26668000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [26988000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [27308000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [27628000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [27948000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [28268000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+
+ ----- Read Serial Flash Discovery Parameter
+  [28838000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+[29136000 ns] COMMAND DECODED: Read Serial Flash Discovery Parameter , withAddr=00000001, with2Addr=00000000, with4Addr=00000000, cmdcode=5a 
+[29136000 ns] 1.COMMAND RECOGNIZED: Read Serial Flash Discovery Parameter. Address expected ...
+  [29158000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [29478000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [29798000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [30096000 ns] Address latched: 000000 (byte 0 of page 0, sector 0)
+  [30096000 ns] Dummy byte expected ...
+  [30118000 ns] Data are going to be output: 00000000. [Read Status Register] 0 0
+  [30416000 ns] Dummy clock cycles latched .
+In SFDP READ: fdpAddr=001 , data=53                30438
+  [30438000 ns] Data are going to be output: 01010011. [Read Status Register] 0 0
+In SFDP READ: fdpAddr=002 , data=46                30758
+  [30758000 ns] Data are going to be output: 01000110. [Read Status Register] 0 0
+In SFDP READ: fdpAddr=003 , data=44                31078
+  [31078000 ns] Data are going to be output: 01000100. [Read Status Register] 0 0
+In SFDP READ: fdpAddr=004 , data=50                31398
+  [31398000 ns] Data are going to be output: 01010000. [Read Status Register] 0 0
+In SFDP READ: fdpAddr=005 , data=06                31718
+  [31718000 ns] Data are going to be output: 00000110. [Read Status Register] 0 0

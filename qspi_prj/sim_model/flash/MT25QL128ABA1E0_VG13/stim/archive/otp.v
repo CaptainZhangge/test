@@ -18,7 +18,7 @@
 `timescale 1ns / 1ns
 
 
-`include "top/StimGen_interface.h"
+`include "StimGen_interface.h"
 // the port list of current module is contained in "StimGen_interface.h" file 
 
 

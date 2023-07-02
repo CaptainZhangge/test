@@ -1,6 +1,9 @@
 module qspi_ctrl    (
 input                       clk                         ,//spi_clk 
 input                       rst_n                       ,
+`ifdef SIM
+input                       flash_en                    ,
+`endif
 input               din                         ,
 input                       aclk                        ,
 input                       aresetn                     ,
@@ -32,7 +35,7 @@ output  reg             dout
 
 parameter               DATA_COUNT = 253;
 
-parameter               RID_CMD = 8'h9F;
+parameter               RID_CMD = 8'h9f;
 
 parameter       IDLE   = 5'b00000,
                         COM    = 5'b00001,
@@ -56,7 +59,16 @@ wire            clk_inv;
 
 assign clk_inv = ~clk;
 assign clk_o = (~ce) && clk_inv ;
-
+`ifdef SIM
+always@(posedge clk or negedge rst_n)
+if(!rst_n)begin
+        count <= 'd0;
+end else if(count == 10'd1022)begin
+        count <= count; 
+end else if(flash_en || count !=10'd0)begin
+        count <= count + 1'd1;
+end
+`else
 always@(posedge clk or negedge rst_n)
 if(!rst_n)begin
         count <= 'd0;
@@ -65,6 +77,7 @@ end else if(count == 10'd1022)begin
 end else begin
         count <= count + 1'd1;
 end
+`endif
 
 always@(posedge clk or negedge rst_n)
 if(!rst_n)begin

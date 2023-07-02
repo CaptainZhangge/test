@@ -16,7 +16,7 @@
 `timescale 1ns / 1ns
 
 
-`include "top/StimGen_interface.h"
+`include "StimGen_interface.h"
 // the port list of current module is contained in "StimGen_interface.h" file
 `ifdef  N25Q256A33E
   `define FILENAME_mem "mem_Q256.vmf"

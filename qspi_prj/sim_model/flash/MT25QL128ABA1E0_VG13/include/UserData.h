@@ -15,7 +15,10 @@
 
 `define MT25QL128ABA1E0
 `define DENSITY_256
+`define HOLD_pin
+//`define N25Q032A13E
 
-`define FILENAME_mem "mem_Q128.vmf" // Memory File Name 
-`define FILENAME_sfdp "sfdp.vmf" // SFDP File Name 
+//`define FILENAME_mem "mem_Q128.vmf" // Memory File Name 
+`define FILENAME_mem "/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/sim/mem_Q128.vmf" // Memory File Name
+`define FILENAME_sfdp "/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/sim/sfdp.vmf" // SFDP File Name 
 `define NVCR_DEFAULT_VALUE 'hFFFF

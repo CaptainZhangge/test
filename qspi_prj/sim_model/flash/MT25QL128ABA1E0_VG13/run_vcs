@@ -21,7 +21,7 @@
 rm sim/simv.daidir/* 
 #vcs -full64 +v2k -debug_all -timescale=1ns/100fs  -o ./sim/simv code/N25Qxxx.v stim/read.v top/*.v
 #vcs -full64 -sverilog -debug_all -timescale=1ns/100fs  -o ./sim/simv code/N25Qxxx.v stim/read.v top/*.v
-vcs -full64 -sverilog -debug_all -timescale=1ns/100fs  -o ./sim/simv code/N25Qxxx.v stim/read_.v top/*.v
+vcs -full64 -sverilog -debug_all -timescale=1ns/100fs  -f filelist.f -o ./sim/simv code/N25Qxxx.v stim/read_.v top/*.v
 #vcs -full64 -sverilog -debug_all -timescale=1ns/100fs  -o ./sim/simv code/N25Qxxx.v stim/program.v top/*.v
 #vcs -full64 -sverilog -debug_all -timescale=1ns/100fs  -o ./sim/simv code/N25Qxxx.v 
 

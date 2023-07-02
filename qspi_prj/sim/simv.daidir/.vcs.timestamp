@@ -1,0 +1,123 @@
+10       
+0 UserData.h
+0 /disk/Synopsys/vcs-mx_vO-2018.09-SP2/vcs-mx/O-2018.09-SP2/etc/systemverilog/UserData.h
+0 DevParam.h
+0 /disk/Synopsys/vcs-mx_vO-2018.09-SP2/vcs-mx/O-2018.09-SP2/etc/systemverilog/DevParam.h
+0 TimingData.h
+0 /disk/Synopsys/vcs-mx_vO-2018.09-SP2/vcs-mx/O-2018.09-SP2/etc/systemverilog/TimingData.h
+0 Decoders.h
+0 /disk/Synopsys/vcs-mx_vO-2018.09-SP2/vcs-mx/O-2018.09-SP2/etc/systemverilog/Decoders.h
+0 PLRSDetectors.h
+0 /disk/Synopsys/vcs-mx_vO-2018.09-SP2/vcs-mx/O-2018.09-SP2/etc/systemverilog/PLRSDetectors.h
+39
++define+SIM
++itf+/disk/Synopsys/vcs-mx_vO-2018.09-SP2/vcs-mx/O-2018.09-SP2/linux64/lib/vcsdp.tab
++lint=all
++memcbk
++vcs+initreg+random
++vcsd
++vpi
+-Mamsrun=
+-Masflags=
+-Mcc=gcc-4.8
+-Mcfl= -pipe -fPIC -O -I/disk/Synopsys/vcs-mx_vO-2018.09-SP2/vcs-mx/O-2018.09-SP2/include
+-Mcplusplus=g++-4.8
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -Wl,--no-as-needed -rdynamic
+-Mobjects= /disk/Synopsys/vcs-mx_vO-2018.09-SP2/vcs-mx/O-2018.09-SP2/linux64/lib/libvirsim.so /disk/Synopsys/vcs-mx_vO-2018.09-SP2/vcs-mx/O-2018.09-SP2/linux64/lib/liberrorinf.so /disk/Synopsys/vcs-mx_vO-2018.09-SP2/vcs-mx/O-2018.09-SP2/linux64/lib/libsnpsmalloc.so /disk/Synopsys/vcs-mx_vO-2018.09-SP2/vcs-mx/O-2018.09-SP2/linux64/lib/libvfs.so /disk/Synopsys/verdi-2018.9/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUXAMD64/pli.a
+-Mout=simv
+-Msaverestoreobj=/disk/Synopsys/vcs-mx_vO-2018.09-SP2/vcs-mx/O-2018.09-SP2/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl -lm
+-Mupdate
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/disk/Synopsys/vcs-mx_vO-2018.09-SP2/vcs-mx/O-2018.09-SP2/include
+-P
+-Xvcs_run_simv=1
+-debug_access+all+bc
+-debug_region+cell
+-f sim_filelist.f
+-full64
+-gen_obj
+-l
+-lca
+-picarchive
+-q
+-sverilog
+/disk/Synopsys/vcs-mx_vO-2018.09-SP2/vcs-mx/O-2018.09-SP2/linux64/bin/vcs1
+/disk/Synopsys/verdi-2018.9/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUXAMD64/novas.tab
+run.log
+47
+sysc_uni_pwd=/home/zhangg/GIT_ALL/test/qspi_prj/sim
+file_name=tb_qspi_flash
+_CE_M=
+_CE_CONDA=
+XDG_SESSION_TYPE=tty
+XDG_SESSION_ID=171906
+XDG_SESSION_CLASS=user
+XDG_RUNTIME_DIR=/run/user/1005
+VMR_MODE_FLAG=64
+VERDI_HOME=/disk/Synopsys/verdi-2018.9/verdi/Verdi_O-2018.09-SP2
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_LOG_FILE=run.log
+VCS_LCAMSG_PRINT_OFF=1
+VCS_HOME=/disk/Synopsys/vcs-mx_vO-2018.09-SP2/vcs-mx/O-2018.09-SP2
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH_OVERRIDE=linux
+VCS_ARCH=linux64
+UNAME=/bin/uname
+TOOL_HOME=/disk/Synopsys/vcs-mx_vO-2018.09-SP2/vcs-mx/O-2018.09-SP2/linux64
+SSH_TTY=/dev/pts/10
+SSH_CONNECTION=1.83.218.225 3315 10.0.24.10 22
+SSH_CLIENT=1.83.218.225 3315 22
+SPYGLASS_HOME=/disk/Synopsys/spyglass_2016.06/SpyGlass-L2016.06/SPYGLASS_HOME
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+PROMPT_COMMAND=history -a; history -a; 
+OVA_UUM=0
+NOVAS_HOME=/disk/Synopsys/verdi-2018.9/verdi/Verdi_O-2018.09-SP2
+MOTD_SHOWN=pam
+MFLAGS=
+MAKE_TERMOUT=/dev/pts/10
+MAKE_TERMERR=/dev/pts/10
+MAKELEVEL=1
+MAKEFLAGS=
+LESSOPEN=| /usr/bin/lesspipe %s
+LESSCLOSE=/usr/bin/lesspipe %s %s
+LC_ALL=C
+HISTTIMEFORMAT=%F %T 
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1005/bus
+CONDA_SHLVL=1
+CONDA_PYTHON_EXE=/disk/software/Anaconda/bin/python
+CONDA_PROMPT_MODIFIER=(base) 
+CONDA_PREFIX=/disk/software/Anaconda
+CONDA_EXE=/disk/software/Anaconda/bin/conda
+CONDA_DEFAULT_ENV=base
+0
+14
+1683201667 ./../sim_model/flash/MT25QL128ABA1E0_VG13/include/PLRSDetectors.h
+1683210887 ./../sim_model/flash/MT25QL128ABA1E0_VG13/include/Decoders.h
+1683201667 ./../sim_model/flash/MT25QL128ABA1E0_VG13/include/TimingData.h
+1683729877 ./../sim_model/flash/MT25QL128ABA1E0_VG13/include/DevParam.h
+1686325537 ./../sim_model/flash/MT25QL128ABA1E0_VG13/include/UserData.h
+1683954641 ./../tb/tb_qspi_flash.sv
+1686488762 ./../sim_model/flash/MT25QL128ABA1E0_VG13/code/N25Qxxx.v
+1683641969 ./../rtl/./qspi_ctrl_top.sv
+1683907986 ./../rtl/./qspi_ctrl.sv
+1682686051 ./../rtl/./asyn_fifo.sv
+1683209398 ./../rtl/filelist.f
+1686322765 sim_filelist.f
+1551421246 /disk/Synopsys/vcs-mx_vO-2018.09-SP2/vcs-mx/O-2018.09-SP2/linux64/lib/vcsdp.tab
+1550753332 /disk/Synopsys/verdi-2018.9/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUXAMD64/novas.tab
+5
+1551422344 /disk/Synopsys/vcs-mx_vO-2018.09-SP2/vcs-mx/O-2018.09-SP2/linux64/lib/libvirsim.so
+1551421792 /disk/Synopsys/vcs-mx_vO-2018.09-SP2/vcs-mx/O-2018.09-SP2/linux64/lib/liberrorinf.so
+1551421768 /disk/Synopsys/vcs-mx_vO-2018.09-SP2/vcs-mx/O-2018.09-SP2/linux64/lib/libsnpsmalloc.so
+1551421789 /disk/Synopsys/vcs-mx_vO-2018.09-SP2/vcs-mx/O-2018.09-SP2/linux64/lib/libvfs.so
+1550752033 /disk/Synopsys/verdi-2018.9/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUXAMD64/pli.a
+1688285499 simv.daidir
+-1 partitionlib

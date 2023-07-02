@@ -1,0 +1,32 @@
+*design* DebussyLib (btIdent Verdi_O-2018.09-SP2)
+Command arguments:
+    +define+verilog
+    -sv
+    +define+SIM
+    -f sim_filelist.f
+        +incdir+./../sim_model/flash/MT25QL128ABA1E0_VG13/include
+        +incdir+./../sim_model/flash/MT25QL128ABA1E0_VG13/sim
+        +incdir+./../sim_model/flash/MT25QL128ABA1E0_VG13/stim
+        +incdir+./../sim_model/flash/MT25QL128ABA1E0_VG13/top
+        -F ./../rtl/filelist.f
+            ./../rtl/./asyn_fifo.sv
+            ./../rtl/./qspi_ctrl.sv
+            ./../rtl/./qspi_ctrl_top.sv
+        ./../sim_model/flash/MT25QL128ABA1E0_VG13/code/N25Qxxx.v
+        ./../tb/tb_qspi_flash.sv
+    +DUMP_FSDB
+
+Highest level modules:
+asyn_fifo
+paramConfig
+PLRSpart1Detect
+PLRSpart2Detect
+tb_qspi_flash
+
+
+*Warning* illegal inout port on instance 'm25p16_inst' port 'Vpp_W_DQ2'
+"./../tb/tb_qspi_flash.sv", 57: 
+
+*Warning* illegal inout port on instance 'm25p16_inst' port 'HOLD_DQ3'
+"./../tb/tb_qspi_flash.sv", 58: 
+Total	0 error(s),   2 warning(s)

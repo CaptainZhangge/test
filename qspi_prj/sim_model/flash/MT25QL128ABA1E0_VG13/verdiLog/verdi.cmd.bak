@@ -1,0 +1,97 @@
+debImport "-sv" "+define+SIM" "-f" "./filelist.f" "+DUMP_FSDB"
+srcHBSelect "Testbench" -win $_nTrace1
+srcSetScope -win $_nTrace1 "Testbench" -delim "."
+srcHBSelect "Testbench" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcHBSelect "Testbench.stim" -win $_nTrace1
+srcSetScope -win $_nTrace1 "Testbench.stim" -delim "."
+srcHBSelect "Testbench.stim" -win $_nTrace1
+srcHBSelect "Testbench" -win $_nTrace1
+srcHBSelect "Testbench" -win $_nTrace1
+srcHBSelect "Testbench" -win $_nTrace1
+srcSetScope -win $_nTrace1 "Testbench" -delim "."
+srcHBSelect "Testbench" -win $_nTrace1
+srcSearchString "initial" -win $_nTrace1 -next -case
+srcSearchString "initial" -win $_nTrace1 -next -case
+srcSearchString "initial" -win $_nTrace1 -next -case
+srcSearchString "initial" -win $_nTrace1 -next -case
+verdiWindowResize -win $_Verdi_1 "404" "106" "900" "700"
+verdiWindowResize -win $_Verdi_1 "146" "49" "1127" "747"
+srcHBSelect "paramConfig" -win $_nTrace1
+srcSetScope -win $_nTrace1 "paramConfig" -delim "."
+srcHBSelect "paramConfig" -win $_nTrace1
+srcHBSelect "Testbench.ck_gen" -win $_nTrace1
+srcHBSelect "Testbench.ck_gen" -win $_nTrace1
+srcHBSelect "Testbench.ck_gen" -win $_nTrace1
+srcSetScope -win $_nTrace1 "Testbench.ck_gen" -delim "."
+srcHBSelect "Testbench.ck_gen" -win $_nTrace1
+srcHBSelect "Testbench.ck_gen" -win $_nTrace1
+srcHBSelect "Testbench" -win $_nTrace1
+srcSetScope -win $_nTrace1 "Testbench" -delim "."
+srcHBSelect "Testbench" -win $_nTrace1
+srcSearchString "initial4" -win $_nTrace1 -next -case
+srcSearchString "initial" -win $_nTrace1 -next -case
+srcSearchString "initial" -win $_nTrace1 -next -case
+srcSearchString "initial" -win $_nTrace1 -next -case
+srcSearchString "initial" -win $_nTrace1 -next -case
+srcHBSelect "Testbench.tasks" -win $_nTrace1
+srcSetScope -win $_nTrace1 "Testbench.tasks" -delim "."
+srcHBSelect "Testbench.tasks" -win $_nTrace1
+srcInvokeExtEditor -win $_nTrace1
+srcSearchString "init" -win $_nTrace2 -next -case
+srcSearchString "init" -win $_nTrace2 -next -case
+srcSearchString "init" -win $_nTrace2 -next -case
+srcSearchString "init" -win $_nTrace2 -next -case
+srcSearchString "init" -win $_nTrace2 -next -case
+srcSearchString "init" -win $_nTrace2 -next -case
+srcSearchString "init" -win $_nTrace2 -next -case
+srcSearchString "init" -win $_nTrace2 -next -case
+srcSearchString "init" -win $_nTrace2 -next -case
+srcSearchString "init" -win $_nTrace2 -next -case
+srcSearchString "init" -win $_nTrace2 -next -case
+srcSearchString "init" -win $_nTrace2 -next -case
+srcSearchString "init" -win $_nTrace2 -next -case
+srcSearchString "init" -win $_nTrace1 -next -case
+srcSearchString " init" -win $_nTrace1 -next -case
+srcSearchString " init" -win $_nTrace1 -next -case
+srcSearchString " init" -win $_nTrace1 -next -case
+srcSearchString " init" -win $_nTrace1 -prev -case
+srcSelect -win $_nTrace1 -range {124 124 3 5 1 1}
+srcSearchString " init" -win $_nTrace1 -prev -case
+srcSelect -win $_nTrace1 -range {124 124 3 5 1 1}
+srcSearchString " init" -win $_nTrace1 -prev -case
+srcSelect -win $_nTrace1 -range {124 124 3 5 1 1}
+srcSearchString " init" -win $_nTrace1 -prev -case
+srcSelect -win $_nTrace1 -range {124 124 3 5 1 1}
+srcHBSelect "Testbench.stim" -win $_nTrace1
+srcSetScope -win $_nTrace1 "Testbench.stim" -delim "."
+srcHBSelect "Testbench.stim" -win $_nTrace1
+srcHBSelect "Testbench" -win $_nTrace1
+srcSetScope -win $_nTrace1 "Testbench" -delim "."
+srcHBSelect "Testbench" -win $_nTrace1
+srcHBSelect "Testbench.tasks" -win $_nTrace1
+srcSetScope -win $_nTrace1 "Testbench.tasks" -delim "."
+srcHBSelect "Testbench.tasks" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 69 -pos 3 -win $_nTrace1
+srcAction -pos 69 3 2 -win $_nTrace1 -name "StimTasks" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -inst "tasks" -line 1009 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -inst "tasks" -line 1009 -pos 1 -win $_nTrace1
+srcAction -pos 1008 3 3 -win $_nTrace1 -name "tasks" -ctrlKey off
+srcShowCalling -win $_nTrace1
+srcSelect -win $_nTrace1 -range {1009 1009 4 5 1 1}
+srcHBSelect "Testbench" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -inst "stim" -line 1007 -pos 1 -win $_nTrace1
+srcAction -pos 1006 3 1 -win $_nTrace1 -name "stim" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcShowCalling -win $_nTrace1
+srcSelect -win $_nTrace1 -range {1007 1007 4 5 1 1}
+srcHBSelect "Testbench" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -inst "tasks" -line 1009 -pos 1 -win $_nTrace1
+srcAction -pos 1008 3 1 -win $_nTrace1 -name "tasks" -ctrlKey off
+srcCloseWindow -win $_nTrace2
+debExit

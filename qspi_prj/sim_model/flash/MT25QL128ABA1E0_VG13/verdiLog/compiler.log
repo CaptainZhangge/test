@@ -1,0 +1,26 @@
+*design* DebussyLib (btIdent Verdi_O-2018.09-SP2)
+Command arguments:
+    +define+verilog
+    -sv
+    +define+SIM
+    -f ./filelist.f
+        +incdir+./include
+        +incdir+./sim
+        +incdir+./stim
+        +incdir+./top
+        ./code/N25Qxxx.v
+        ./stim/archive/read.v
+        ./top/ClockGenerator.v
+        ./top/StimTasks.v
+        ./top/Testbench.v
+    +DUMP_FSDB
+
+Highest level modules:
+paramConfig
+PLRSpart1Detect
+PLRSpart2Detect
+SetConfig
+StimTasksConfig
+Testbench
+
+Total	0 error(s),   0 warning(s)

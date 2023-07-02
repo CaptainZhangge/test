@@ -1,0 +1,218 @@
+{
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        1
+    ],
+    "Read": [
+        "Read",
+        "ZwmA6",
+        "module",
+        16
+    ],
+    "StimTasks": [
+        "StimTasks",
+        "qWs9n",
+        "module",
+        31
+    ],
+    "NonVolatileConfigurationRegister": [
+        "NonVolatileConfigurationRegister",
+        "jJhtT",
+        "module",
+        12
+    ],
+    "paramConfig": [
+        "paramConfig",
+        "tW6GT",
+        "module",
+        2
+    ],
+    "Program": [
+        "Program",
+        "DbPB7",
+        "module",
+        8
+    ],
+    "OTP_memory": [
+        "OTP_memory",
+        "wtFGP",
+        "module",
+        21
+    ],
+    "TimingCheck": [
+        "TimingCheck",
+        "gS5z5",
+        "module",
+        22
+    ],
+    "SetConfig": [
+        "SetConfig",
+        "rkpgE",
+        "module",
+        35
+    ],
+    "CUIdecoder": [
+        "CUIdecoder",
+        "rfDph",
+        "module",
+        4
+    ],
+    "N25Qxxx": [
+        "N25Qxxx",
+        "E6kFe",
+        "module",
+        3
+    ],
+    "UtilFunctions": [
+        "UtilFunctions",
+        "FfcvD",
+        "module",
+        7
+    ],
+    "CUIdecoderEFI_MSE": [
+        "CUIdecoderEFI_MSE",
+        "h7sya",
+        "module",
+        5
+    ],
+    "FlashDiscoveryParameter": [
+        "FlashDiscoveryParameter",
+        "gp9Va",
+        "module",
+        17
+    ],
+    "FlagStatusRegister": [
+        "FlagStatusRegister",
+        "Ng4Qf",
+        "module",
+        10
+    ],
+    "Memory": [
+        "Memory",
+        "f0K8C",
+        "module",
+        6
+    ],
+    "ProtectionManagementRegister": [
+        "ProtectionManagementRegister",
+        "ZNcgq",
+        "module",
+        11
+    ],
+    "StatusRegister": [
+        "StatusRegister",
+        "cebzP",
+        "module",
+        9
+    ],
+    "PLRSpart2Detect": [
+        "PLRSpart2Detect",
+        "vAFMw",
+        "module",
+        24
+    ],
+    "VolatileConfigurationRegister": [
+        "VolatileConfigurationRegister",
+        "CJs6b",
+        "module",
+        13
+    ],
+    "PPBLockBitRegister": [
+        "PPBLockBitRegister",
+        "ffZeI",
+        "module",
+        27
+    ],
+    "VolatileEnhancedConfigurationRegister": [
+        "VolatileEnhancedConfigurationRegister",
+        "h49xc",
+        "module",
+        14
+    ],
+    "PasswordRegister": [
+        "PasswordRegister",
+        "z0gcT",
+        "module",
+        15
+    ],
+    "Stimuli": [
+        "Stimuli",
+        "wdNLp",
+        "module",
+        34
+    ],
+    "LockManager": [
+        "LockManager",
+        "y4gzn",
+        "module",
+        18
+    ],
+    "LockManager4KB": [
+        "LockManager4KB",
+        "f4Uaa",
+        "module",
+        19
+    ],
+    "ASPRegister": [
+        "ASPRegister",
+        "DMj2m",
+        "module",
+        28
+    ],
+    "DualQuadOps": [
+        "DualQuadOps",
+        "F6uVY",
+        "module",
+        20
+    ],
+    "ClockGenerator": [
+        "ClockGenerator",
+        "PF3UL",
+        "module",
+        33
+    ],
+    "PLRSpart1Detect": [
+        "PLRSpart1Detect",
+        "S2Q1F",
+        "module",
+        23
+    ],
+    "GeneralPurposeRegister": [
+        "GeneralPurposeRegister",
+        "i8AkQ",
+        "module",
+        25
+    ],
+    "PPBManager": [
+        "PPBManager",
+        "unY8T",
+        "module",
+        26
+    ],
+    "DebugModule": [
+        "DebugModule",
+        "K4GyS",
+        "module",
+        29
+    ],
+    "StimTasksConfig": [
+        "StimTasksConfig",
+        "Y9Zj3",
+        "module",
+        32
+    ],
+    "Testbench": [
+        "Testbench",
+        "qVPGR",
+        "module",
+        30
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        36
+    ]
+}

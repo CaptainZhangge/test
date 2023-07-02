@@ -44,8 +44,8 @@
 //
 
 module SetConfig();
-    `include "include/UserData.h"
-    `include "include/DevParam.h"
+    `include "UserData.h"
+    `include "DevParam.h"
 
 endmodule
 
@@ -54,8 +54,8 @@ endmodule
 `else
   module Stimuli (S, RESET_DQ3, DQ0, DQ1, Vcc, Vpp_W_DQ2);
 `endif
-    `include "include/DevParam.h"
-    `include "include/UserData.h"
+    `include "DevParam.h"
+    `include "UserData.h"
    
    
     output S;

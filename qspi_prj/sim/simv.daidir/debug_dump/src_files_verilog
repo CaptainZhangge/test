@@ -1,0 +1,10 @@
+/home/zhangg/GIT_ALL/test/qspi_prj/rtl/asyn_fifo.sv
+/home/zhangg/GIT_ALL/test/qspi_prj/rtl/qspi_ctrl.sv
+/home/zhangg/GIT_ALL/test/qspi_prj/rtl/qspi_ctrl_top.sv
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/code/N25Qxxx.v
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/include/Decoders.h
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/include/DevParam.h
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/include/PLRSDetectors.h
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/include/TimingData.h
+/home/zhangg/GIT_ALL/test/qspi_prj/sim_model/flash/MT25QL128ABA1E0_VG13/include/UserData.h
+/home/zhangg/GIT_ALL/test/qspi_prj/tb/tb_qspi_flash.sv
